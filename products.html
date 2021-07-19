@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<style>
+#parent
+{
+    background-color: skyblue;
+    height: 1200px;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 50px;
+}
+#products
+{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-gap:7%;
+    margin: 10%;
+    margin-top: 5px;
+}
+
+#products div
+{
+    text-align: center;
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+#products img
+{
+    height: 250px;
+    width: 300px;
+    margin: auto;
+}
+
+#products button
+{
+    margin: auto;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.sort button
+{
+    height: 50px;
+    width: 150px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button
+{
+    height: 50px;
+    width: 150px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+</style>
+<body>
+    <div id="parent">
+    <h1>MASAI Jewellery Store</h1>
+    <div class="sort">
+        <button onclick = "sortLH()">Price- low to high</button>
+        <button onclick = "sortHL()">Price-High to Low</button>
+    </div>
+    <button onclick ="showCart()">Show Cart Items</button>
+    <div id = "products"></div>
+    </div>
+</body>
+</html>
+<script src= "products.js"></script>
