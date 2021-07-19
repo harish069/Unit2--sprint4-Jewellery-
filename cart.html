@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #parent
+    {
+        background-color: yellowgreen;
+        height: 800px;
+    }
+    h1
+    {
+        text-align: center;
+        font-size: 50px;
+    }
+    #cartDisplay
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-gap:80px;
+        margin: 20px;
+    }
+
+    #cartDisplay div
+    {
+        display: grid;
+        text-align: center;
+        align-items: center;
+        border: 2px solid black;
+        width: 300px;
+        font-size: 25px;
+    }
+
+    #cartDisplay img
+    {
+        height: 200px;
+        width: 250px;
+        justify-items: center;
+        padding: 20px;
+    }
+
+    button
+    {
+      width: 150px;
+      height: 30px;
+      font-size: 15px;
+    }
+
+    #totalPrice
+    {
+        font-size: 20px;
+        color: black;
+    }
+</style>
+<body>
+    <div id="parent">
+    <h1>Cart Items</h1>
+    <input type="text" id = "promocode" placeholder="promocode">
+    <button onclick="applyPromo()">Apply promocode</button>
+    <button id = "check" onclick="checkOut()">Checkout</button>
+    <p>Total Price:<span id ="totalPrice"></span></p>
+    <div id = "cartDisplay"></div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>

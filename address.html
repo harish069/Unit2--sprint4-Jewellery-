@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #parent
+    {
+        background-color: yellow;
+        height: 600px;
+    }
+    h1
+    {
+        text-align: center;
+    }
+    #myForm
+    {
+        display: grid;
+        grid-template-rows: repeat(5, 20%);
+        border-radius: 2px solid black;
+        width: 500px;
+        margin: auto;
+    }
+
+    #myform > label
+    {
+        margin-top: 20px;
+      font-size :50px;
+      text-align: center;
+    }
+
+    #myform > input
+    {
+        width: 100px;
+        height: 50px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .submit
+    {
+        margin-left : 500px;
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    .proceed
+    {
+        margin-top: 90px;
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+
+</style>
+<body>
+    <div id="parent">
+    <h1>Enter Address Details</h1>
+    <div id="address"></div>
+    <form id = 'myForm'>
+        <label>Name</label>
+        <input type="text" id ="name" placeholder="name"/>
+        <label>Address</label>
+        <input type="text" id="address" placeholder="address"/>
+        <label>City</label>
+        <input type="text" id="city" placeholder="city"/>
+        <label>State</label>
+        <input type="text" id="state" placeholder="state"/>
+    </form>
+    <button class = "submit" onclick="addAddress()">submit</button>
+    <button class ="proceed" onclick="(location.href= 'payment.html')">proceed to payment</button>
+    </div>
+</body>
+</html>
+
+<script src= "address.js"></script>
